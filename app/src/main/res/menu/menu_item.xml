@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/ic_more"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/refresh"
+                android:icon="@drawable/ic_refresh"
+                android:title="Refresh"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/home"
+                android:icon="@drawable/ic_home"
+                android:title="Home Page"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/portal"
+                android:icon="@drawable/ic_portal"
+                android:title="Choice Dream"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/theme"
+                android:icon="@drawable/ic_light_or_dark"
+                android:title="Light/Dark"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_share"
+                android:title="Share"
+                app:showAsAction="ifRoom" />
+            <!--<item
+                android:id="@+id/rate"
+                android:icon="@drawable/ic_rate"
+                android:title="Rate App"
+                app:showAsAction="ifRoom" />-->
+            <item
+                android:id="@+id/developer"
+                android:icon="@drawable/ic_developer"
+                android:title="Developer"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckBox">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/selectOneTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your subjects"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/banglaCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/selectOneTxt"
+        android:text="Bangla"
+        android:drawableLeft="@drawable/check_drawable_bg"
+        android:button="@null"
+        android:drawablePadding="5dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"/>
+    <CheckBox
+        android:id="@+id/englishCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="English"
+        android:textSize="15sp"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/check_drawable_bg"
+        android:button="@null"
+        app:layout_constraintTop_toBottomOf="@id/banglaCB"
+        app:layout_constraintStart_toStartOf="@id/banglaCB"/>
+    <CheckBox
+        android:id="@+id/socialCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Social Science"
+        android:button="@null"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/check_drawable_bg"
+        app:layout_constraintTop_toBottomOf="@id/englishCB"
+        app:layout_constraintStart_toStartOf="@id/englishCB"
+        android:textSize="15sp"/>
+    <CheckBox
+        android:id="@+id/generalCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="General Science"
+        android:textSize="15sp"
+        android:button="@null"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/check_drawable_bg"
+        app:layout_constraintTop_toBottomOf="@id/socialCB"
+        app:layout_constraintStart_toStartOf="@id/socialCB"/>
+    <Button
+        android:id="@+id/okBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/generalCB"
+        app:layout_constraintStart_toStartOf="@id/generalCB"
+        android:layout_marginTop="20dp"
+        android:text="Ok"
+        android:backgroundTint="#474646"/>
+
+    <Spinner
+        android:id="@+id/spinnerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/okBtn"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/doneId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/spinnerId"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:text="Done"
+        android:visibility="gone"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/black"/>
+
+    <TextView
+        android:id="@+id/showAllTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doneId" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

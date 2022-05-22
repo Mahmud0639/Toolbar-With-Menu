@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background_color"
+    tools:context=".ThemeActivity">
+
+    <Switch
+        android:id="@+id/aSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:button="@null"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:switchPadding="10dp"
+        android:text="Dark/Light"
+        android:textSize="16sp"
+        android:thumb="@drawable/ic_brightness"
+        android:track="@drawable/track_selector"
+        app:layout_constraintBottom_toTopOf="@+id/infoTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42000002"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/infoTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/about"
+        android:textColor="?attr/text_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/paymentTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aSwitch" />
+
+    <TextView
+        android:id="@+id/paymentTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Payment Methods"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@id/infoTxt"
+        app:layout_constraintTop_toBottomOf="@+id/infoTxt" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/myRadioBtnBack"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"
+        app:layout_constraintStart_toStartOf="@id/paymentTxt"
+        app:layout_constraintTop_toBottomOf="@+id/paymentTxt">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/visa"
+            android:drawablePadding="10dp"
+            android:text="Visa"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/paypal"
+            android:drawablePadding="10dp"
+            android:text="PayPal"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/maestro"
+            android:drawablePadding="10dp"
+            android:text="MasterCard"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E91E63"
+        android:padding="10dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/radioTxtId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:gravity="start"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/submitBtn"
+        app:layout_constraintTop_toBottomOf="@+id/submitBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
